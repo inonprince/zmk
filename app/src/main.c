@@ -28,5 +28,7 @@ int main(void) {
     zmk_display_init();
 #endif /* CONFIG_ZMK_DISPLAY */
 
-    return 0;
+#ifdef CONFIG_ZMK_MOUSE
+    zmk_mouse_init();
+#endif /* CONFIG_ZMK_MOUSE */
 }
